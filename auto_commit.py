@@ -1,10 +1,13 @@
 import subprocess
 import os
 from datetime import datetime
+from dotenv import load_dotenv
 
+# Load environment variables from .env file
+load_dotenv()
 
 # Path to your Git repository
-repo_path = r"C:\Users\randy\PycharmProjects\Daily-Commits"
+repo_path = os.getenv("REPO_PATH")
 
 # Commit message with current time
 commit_message = f"Auto commit on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
@@ -19,16 +22,16 @@ commands = [
 #--------------------------------
 
 # Path to your repo and README file
-readme_path = os.path.join(repo_path, "README.md")
+txt_path = os.path.join(repo_path, "commit-here.txt")
 
 # The text you want to add
 text_to_add = f"\nAuto-updated on purpose by script on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
 
-# Append text to the README.md file
-with open(readme_path, "a", encoding="utf-8") as file:
+# Append text to the commit-here.txt file
+with open(txt_path, "w", encoding="utf-8") as file:
     file.write(text_to_add)
 
-print("README.md updated.")
+print("commit-here.txt updated.")
 
 #----------------------------------
 

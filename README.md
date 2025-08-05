@@ -1,5 +1,3 @@
 # Daily-Commits
 
-Auto-updated on purpose by script on 2025-08-04 21:32:04
-
-Auto-updated on purpose by script on 2025-08-04 21:40:01
+After you integrate this repo to your GitHub, you can use your Task Scheduler to automatically execute auto_commit.py once a day. This makes it look like you are commiting to your Github everyday, so HR thinks you are making daily contributions to your GitHub.
